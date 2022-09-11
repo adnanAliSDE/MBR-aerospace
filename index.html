@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MBR Aerospace | LOGIN</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #d7d7d7;
+        font-family: "Times New Roman", Times, serif;
+      }
+      main {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container {
+        width: 300px;
+      }
+      .container h1,
+      .copy {
+        text-align: center;
+      }
+      .form {
+        background-color: #fff;
+        width: 100%;
+        padding: 20px;
+        border-radius: 20px;
+        margin: 20px 0px;
+      }
+      input {
+        width: 100%;
+        background-color: #d7d7d7;
+        margin-bottom: 10px;
+        padding: 20px;
+        border-radius: 20px;
+        outline: none;
+        border: none;
+      }
+      input:focus {
+        border: none;
+        outline: none;
+      }
+      #passDisplay {
+        margin-top: 2px;
+      }
+      label {
+        width: 980%;
+        margin-bottom: -5px;
+      }
+      .passDisplay {
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 5px;
+      }
+      .btn {
+        background-color: #008fff;
+        color: #fff;
+      }
+      ul {
+        list-style-type: none;
+      }
+      ul li a {
+        text-decoration: none;
+        margin-bottom: 10px;
+      }
+      .copy {
+        color: #525252;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <h1>Please login to continue</h1>
+        <section class="form">
+          <input type="text" placeholder="Username" />
+          <input type="password" id="password" placeholder="Password" />
+          <div class="passDisplay">
+            <input type="checkbox" id="passDisplay" name="passDisplay" />
+            <label for="passDisplay">Hide password</label>
+          </div>
+          <a href="controller.html">
+              <input type="submit" class="btn" value="Login" />
+            </a>
+          <div class="links">
+            <ul>
+              <li><a href="forgot">Forgot password</a></li>
+              <li><a href="signup">Create new account</a></li>
+            </ul>
+          </div>
+        </section>
+        <section class="copy">&copy; MBR Aerospace 2022-2023</section>
+      </div>
+    </main>
+  </body>
+  <script>
+    const passwordInput = document.querySelector("#password");
+    const passDisplay = document.querySelector("#passDisplay");
+    passDisplay.addEventListener("click", () => {
+      if (passwordInput.type == 'password') {
+        passwordInput.type = 'text';
+        console.log(passDisplay.ariaChecked);
+        console.log(passwordInput.type);
+      } else {
+        passwordInput.type = 'password';
+        console.log("Hello");
+      }
+    });
+  </script>
+</html>
