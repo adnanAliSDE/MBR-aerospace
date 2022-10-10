@@ -1,4 +1,4 @@
-var elem = document.querySelector("body");
+var elem =document.documentElement;
 
 function openFullscreen() {
   if (elem.requestFullscreen) {
@@ -9,4 +9,3 @@ function openFullscreen() {
     elem.msRequestFullscreen();
   }
 }
-openFullscreen();
