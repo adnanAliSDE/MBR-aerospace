@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,47 +9,49 @@
     <link rel="stylesheet" href="controller.css">
     <script src="https://kit.fontawesome.com/0452808a14.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <main>
+        <h1>Hello Adnan</h1>
         <!-- left -->
-<section class="controls">
-    <section class="left">
-        <div class="settings" onclick="openFullscreen();"><i class="fa-solid fa-gear"></i></div>
         <section class="controls">
-            <div class="controlItem antiMissile">
-                <i class="fa-brands fa-gripfire"></i>
+            <section class="left">
+                <div class="settings" onclick="openFullscreen();"><i class="fa-solid fa-gear"></i></div>
+                <section class="controls">
+                    <div class="controlItem antiMissile">
+                        <i class="fa-brands fa-gripfire"></i>
+                    </div>
+                    <div class="speedControl">
+                        <div class="controlItem up"><i class="fa-solid fa-angle-up"></i></div>
+                        <div class="controlItem down"><i class="fa-solid fa-chevron-down"></i></div>
+                    </div>
+                </section>
+                <div class="buffer"></div>
+            </section>
+
+            <!-- right -->
+            <section class="right">
+                <div class="map"></div>
+                <div class="fire">
+                    <div class="controlItem mg"><i class="fa-solid fa-gun"></i></div>
+                    <div class="controlItem missile"><i class="fa-solid fa-rocket"></i></div>
+                </div>
+                <div class="buffer"></div>
+            </section>
+
+            <div class="bottom">
+                <div class="controlItem altControl">
+                    <div class="altBtn"></div>
+                </div>
+                <div class="indicator">
+                    <div class="speed">Speed <br><span class="speedValue">27</span> KM/h</div>
+                    <div class="altitude">Altitude: <br><span class="altValue">1579</span> m</div>
+                </div>
             </div>
-            <div class="speedControl">
-                <div class="controlItem up"><i class="fa-solid fa-angle-up"></i></div>
-                <div class="controlItem down"><i class="fa-solid fa-chevron-down"></i></div>
-            </div>
+            <div class="aim"></div>
         </section>
-        <div class="buffer"></div>
-    </section>
 
-    <!-- right -->
-    <section class="right">
-        <div class="map"></div>
-        <div class="fire">
-            <div class="controlItem mg"><i class="fa-solid fa-gun"></i></div>
-            <div class="controlItem missile"><i class="fa-solid fa-rocket"></i></div>
-        </div>
-        <div class="buffer"></div>
-    </section>
-
-    <div class="bottom">
-        <div class="controlItem altControl">
-            <div class="altBtn"></div>
-        </div>
-        <div class="indicator">
-            <div class="speed">Speed <br><span class="speedValue">27</span> KM/h</div>
-            <div class="altitude">Altitude: <br><span class="altValue">1579</span> m</div>
-        </div>
-    </div>
-    <div class="aim"></div>
-</section>
-
-<!-- left:
+        <!-- left:
 pause btn
 decoy
 flip
@@ -66,21 +69,23 @@ speed
 altitude
 
  -->
-   </main>
-<script>
-// var elem =document.documentElement;
+    </main>
+    <script>
+        // var elem =document.documentElement;
 
-function openFullscreen() {
-alert("Main chala");
-  if (elem.requestFullscreen) {
-    elem.requestFullscreen();
-  } else if (elem.webkitRequestFullscreen) { /* Safari */
-    elem.webkitRequestFullscreen();
-  } else if (elem.msRequestFullscreen) { /* IE11 */
-    elem.msRequestFullscreen();
-  }
-}
-alert("Hello");
-</script>
+        function openFullscreen() {
+            alert("Main chala");
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (elem.webkitRequestFullscreen) { /* Safari */
+                elem.webkitRequestFullscreen();
+            } else if (elem.msRequestFullscreen) { /* IE11 */
+                elem.msRequestFullscreen();
+            }
+        }
+        alert("Hello");
+        document.querySelector("body").innerHTML = "Hello Adnan";
+    </script>
 </body>
+
 </html>
