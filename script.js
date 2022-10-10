@@ -10,3 +10,4 @@ alert("Main chala");
     elem.msRequestFullscreen();
   }
 }
+alert("Hello");
